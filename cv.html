@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width:500px;
+  float:right;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 1% 25.5%;
+  display:inline-block;
+  text-align: center;
+  border: 3px solid #FDDBF0;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #E0DDDF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-family: verdana;
+}
+
+.sidebar a.active {
+  background-color: #FDDBF0;
+  color: black;
+  border: 1px solid #555;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  margin-right: 500px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- The sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="publications.html">Publications</a>
+  <a href="outreach.html">Outreach</a>
+  <a class="active" href="cv.html">CV</a>
+</div>
+
+<div class="card">
+  <img src="3quarter.JPG" alt="Veronika" style="float:right;width:500px;height:500px;">
+  <div class="container">
+    <h3 style="font-family:verdana;">Veronika Dornan</h3>
+    <h3 style="font-family:verdana;">dornanv@mcmaster.ca</h3>
+    <h3 style="font-family:verdana;"><a href="https://orcid.org/0000-0002-7731-1291">ORCID</a></h3>
+  </div>
+</div>
+
+<div class="content">
+<title>Veronika's Website</title>
+<h1 style="font-family:verdana;">Curriculum Vitae</h1>
+<p style="font-family:verdana;">... Coming soon!</p>
+
+</div>
+</body>

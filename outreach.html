@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+  /* The grid: Three equal columns that floats next to each other */
+ .column {
+   float: left;
+   width: 225px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 2px;
+   padding-right: 2px;
+   text-align: center;
+   font-size: 20px;
+   font-family:verdana;
+   cursor: pointer;
+   color: black;
+   margin: 5px;
+ }
+
+ .row {
+   margin-left: 200px;
+   margin-right: 500px;
+ }
+
+ .containerTab {
+   padding: 10px;
+   color: black;
+   margin-left: 205px;
+   margin-right: 512px;
+   margin-top: 0px;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: left;
+ }
+
+ /* Closable button inside the image */
+ .closebtn {
+   float: right;
+   color: black;
+   font-size: 35px;
+   font-family:verdana;
+   cursor: pointer;
+ }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width:500px;
+  float:right;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 1% 25.5%;
+  display:inline-block;
+  text-align: center;
+  border: 3px solid #FDDBF0;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #E0DDDF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-family: verdana;
+}
+
+.sidebar a.active {
+  background-color: #FDDBF0;
+  color: black;
+  border: 1px solid #555;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  margin-right: 500px;
+  padding: 1px 16px;
+}
+
+div.collcontent {
+  padding: 1px 16px;
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.collapsible {
+  background-color: #FDDBF0;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 690px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  float: left;
+}
+
+.active, .collapsible:hover {
+  background-color: #FBABDD;
+}
+
+</style>
+</head>
+<body>
+
+<!-- The sidebar -->
+<div class="sidebar">
+  <a href="index.html">Home</a>
+  <a href="publications.html">Publications</a>
+  <a class="active" href="outreach.html">Outreach</a>
+  <a href="cv.html">CV</a>
+</div>
+
+<div class="card">
+  <img src="3quarter.JPG" alt="Veronika" style="float:right;width:500px;height:500px;">
+  <div class="container">
+    <h3 style="font-family:verdana;">Veronika Dornan</h3>
+    <h3 style="font-family:verdana;">dornanv@mcmaster.ca</h3>
+    <h3 style="font-family:verdana;"><a href="https://orcid.org/0000-0002-7731-1291">ORCID</a></h3>
+  </div>
+</div>
+
+<div class="content">
+<title>Veronika's Website</title>
+<h1 style="font-family:verdana;">Outreach Work</h1>
+<p style="font-family:verdana;">I am strongly committed to astronomy outreach, communication, and education. I believe that excellence in research is not worthwhile if one is unable to communicate that research effectively to the public, in an engaging way. Simply put: as researchers we are not working just for ourselves, we are working for the benefit of all, and so we must prioritize being able to share what we discover with everyone.</p>
+<p style="font-family:verdana;">As a graduate student I have honed my science communication skills through a variety of projects, which you can check out below.</p>
+</div>
+
+<!-- The grid: three columns -->
+<div class="row">
+ <div class="column" onclick="openTab('b1');" style="background: #FDDBF0;">Planetarium Presenter</div>
+ <div class="column" onclick="openTab('b2');" style="background: #FDDBF0;">PIPA Executive</div>
+ <div class="column" onclick="openTab('b3');" style="background: #FDDBF0;">Eclipse Ambassador</div>
+</div>
+
+<div class="row">
+ <div class="column" onclick="openTab('b4');" style="background: #FDDBF0;">Killarney Astronomer</div>
+ <div class="column" onclick="openTab('b5');" style="background: #FDDBF0;">CASCA GSC Executive</div>
+ <div class="column" onclick="openTab('b6');" style="background: #FDDBF0;">Sidewalk Astronomy</div>
+</div>
+
+<!-- The expanding grid (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background: #FDDBF0">
+ <!-- If you want the ability to close the container, add a close button -->
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">Planetarium Presenter</h2>
+ <p style="font-family:verdana;">I have worked as a presenter at the W.J. McCallion Planetarium at McMaster University since 2019. I have given live shows to members of the public on a variety of topic for all ages. I have also developed three original shows on topics inclusing women's contributions to astronomy, the Voyager missions, and ancient astronomy. You can see descriptions for these, and all other shows I have given, <a href="https://planetarium.physics.mcmaster.ca/available-shows/">here.</a></p>
+ <p style="font-family:verdana;">I have also been one of the first presenters for McMaster's portable planetarium program since 2022. One of the focuses of this program has been to bring planetarium shows to traditionally underserved groups, with an emphasis on local indigenous communities. Through this I have been trained to present our indigenous astronomy show, The Celestial Bear, which was developed with members of The Six Nations of The Grand River.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background: #FDDBF0">
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">PIPA Executive</h2>
+ <p style="font-family:verdana;">I have been a member of PIPA (promoting inclusion in physics and astronomy), a graduate student-run group at McMaster University, since 2019, and have served as an executive member since 2022. Our group has advocated for the deparment to prioritize EDI initiatives, has organized events for students to meet with visiting researchers, and have hosted Elevate, a yearly outreach event for grade 10 students.</p>
+ <p style="font-family:verdana;">Elevate: a day for inclusion in science, is an event where local grade 10 students from underrepresented groups in STEM (girls, students of colour, queer and trans students, students with disabilities) are invited to McMaster campus to explore different areas of science. You can learn more about Elevate and PIPA <a href="https://physics.mcmaster.ca/pipa/">here.</a></p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background: #FDDBF0">
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">2024 Eclipse Ambassador</h2>
+ <p style="font-family:verdana;">Prior to the April 8th, 2024 total eclipse I worked with the McMaster astronomy department for over a year to connect with and educate the public. I helped develop a new planetarium show for McMaster, gave lectures to members of the public throughout the GTA, gave media appearances, and coordinated solar viewing for McMaster's eclipse viewing event.</p>
+ <p style="font-family:verdana;">McMaster's eclipse viewing event hosted over 5000 people from across Ontario in the Ron Joyce Football Stadium to safely view the solar elcipse. I led a team of eight graduate students to ensure that all members of the public had the opportunity to view the eclipse with solar telescopes, sunspotters, pinhole projectors, and eclipse galsses.</p>
+</div>
+
+<div id="b4" class="containerTab" style="display:none;background: #FDDBF0">
+ <!-- If you want the ability to close the container, add a close button -->
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">Killarney Provincial Park Astronomer in Residence</h2>
+ <p style="font-family:verdana;">From June 24-30, 2024 I served as the astronomer in residence at Killarney Provincial Park in Northern Ontario. Through this program I facilitated outreach events for park visitors related to the park's observatory and official dark sky designation. These outreach events included lectures at the park's amphitheatre on the science behind naked-eye astronomical events, nighttime viewing on the park observatory's 16-inch telescope, and live night sky constellation tours.</p>
+ <p style="font-family:verdana;">I kept a blog detailing my time at the park to highlight the astronomy activities offered by Killarney, which you can check out <a href="https://www.yorku.ca/science/observatory/air/astronomer-in-residence-blog/">here.</a> I will be returning to Killarney for a second week as astronomer in residence from October 7-13, 2024 to continue this outreach work.</p>
+</div>
+
+<div id="b5" class="containerTab" style="display:none;background: #FDDBF0">
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">CASCA Graduate Student Committee Executive</h2>
+ <p style="font-family:verdana;">I have served as the Outreach Executive on the Canadian Astronomical Society's (CASCA) Graduate Student Committee since 2023. Through this position I meet with the CASCA Outreach Committee three times a year, which includes members from the CASCA board and Post-Doctoral Committee, to discuss CASCA's role in National astronomical outreach initiatives. I also take an active role throughout the year in representing and advocating for Canadian astronomy graduate students to the CASCA board. Finally, I work with the rest of the GSC to organize the yearly graduate student workshop, and to judge awards for best student talks and posters at the CASCA annual general meeting in order to highlight graduate student research.</p>
+</div>
+
+<div id="b6" class="containerTab" style="display:none;background: #FDDBF0">
+ <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+ <h2 style="font-family:verdana;">Sidewalk Astronomy Coordinator</h2>
+ <p style="font-family:verdana;">I have volunteered with McMaster's sidewalk astronomy program since 2019, and have served as one of it's coordinator since 2023. This program uses two 10-inch reflecting telescopes and one 8-inch refracting telescope provided by McMaster University to allow members of the public to experience night sky viewing, free of barriers. I coordinate a team of astronomy graduate students to host roughly five viewing events per year, focussing on viewing the moon, planets, and star clusters. My job includes advertising our events and ensuring our graduate student volunteers are properly trained to communicate with members of the public about our viewing targets.</p>
+</div>
+
+<div class="content">
+<p style="font-family:verdana;">I have also done a few media appearances and interviews related to my outreach work. You can see these below, in addition to recordings of some of my public lectures. If you would like to request a media appearance or lecture, please email me!</p>
+<button type="button" class="collapsible">Media Appearances</button>
+<div class="collcontent">
+<ul style="font-family:verdana;">
+  <li><a href="https://dailynews.mcmaster.ca/articles/phd-students-planetarium-roadshow-gives-kids-a-sneak-peek-at-the-total-eclipse/">McMaster Daily News portable planetarium spotlight, March 20th, 2024.</a></li>
+ <li><a href="https://www.ctvnews.ca/video/c2899441--it-s-moving-really-quickly---astronomer?playlistId=1.6808417">CTV News eclipse interview, April 8th, 2024.</a></li>
+ <li><a href="https://dailynews.mcmaster.ca/articles/veronika-dornan-astronomer-in-residence-at-killarney/">McMaster Daily News Killarney spotlight, July 16th, 2024.</a></li>
+ <li><a href="https://open.spotify.com/episode/3NAwYR3WVpABEjDGv8a61X?si=67d8f1fd69204fd1">CMHL Radio Perseids interview, August 12th, 2024.</a></li>
+</ul>
+</div>
+<button type="button" class="collapsible">Public Lectures</button>
+<div class="collcontent">
+  <ul style="font-family:verdana;">
+   <li><a href="https://mcmasteru365-my.sharepoint.com/:v:/g/personal/dornanv_mcmaster_ca/EWM8h080cXRKqtQiuBpU3cABDPlMHWi085ZDDIVXpBxGjA?referrer=Outlook.Web&referrerScenario=email-linkwithembed">McMaster eclipse public lecture, March 26th, 2024.</a></li>
+   <li><a href="https://www.youtube.com/watch?v=I2RnBFckzlA&t=2242s">Allan I. Carswell Observatory solar cycle public lecture, May 31st, 2024.</a></li>
+   <li><a href="https://www.youtube.com/watch?v=otZT3bX297M">McMaster recurring nova public lecture, August 19th, 2024.</a></li>
+  </ul>
+</div>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+  function openTab(tabName) {
+    var i, x;
+    x = document.getElementsByClassName("containerTab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+  }
+</script>
+
+</body>

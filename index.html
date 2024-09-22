@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="google-site-verification" content="3nkOP_BRG7MMkuYpL8gOhMmH-ewz9rCaT0vtCWsQo2U" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width:500px;
+  float:right;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 1% 25.5%;
+  display:inline-block;
+  text-align: center;
+  border: 3px solid #FDDBF0;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #E0DDDF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-family: verdana;
+}
+
+.sidebar a.active {
+  background-color: #FDDBF0;
+  color: black;
+  border: 1px solid #555;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  margin-right: 500px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- The sidebar -->
+<div class="sidebar">
+  <a class="active">Home</a>
+  <a href="publications.html">Publications</a>
+  <a href="outreach.html">Outreach</a>
+  <a href="cv.html">CV</a>
+</div>
+
+<div class="card">
+  <img src="3quarter.JPG" alt="Veronika" style="float:right;width:500px;height:500px;">
+  <div class="container">
+    <h3 style="font-family:verdana;">Veronika Dornan</h3>
+    <h3 style="font-family:verdana;">dornanv@mcmaster.ca</h3>
+    <h3 style="font-family:verdana;"><a href="https://orcid.org/0000-0002-7731-1291">ORCID</a></h3>
+  </div>
+</div>
+
+<div class="content">
+<title>Veronika's Website</title>
+<h1 style="font-family:verdana;">Veronika Dornan</h1>
+<p style="font-family:verdana;">Hello! I am a final-year year Phd student currently supervised by Dr Bill Harris at McMaster University.</p>
+<p style="font-family:verdana;">I am defending my Phd in summer 2025 and <b>am applying for post-docs this fall.</b></p>
+<p style="font-family:verdana;">If you would like to contact me, you can email me at <b>dornanv@mcmaster.ca</b></p>
+<h2 style="font-family:verdana;">Research Interests</h2>
+<p style="font-family:verdana;">My research is in observing globular cluster systems (GCS) around galaxies,
+  specifically studying the GCS mass - halo mass relationship at the highest and lowest mass ends.
+  Galaxies across all masses have been found to follow this 1:1 relation, but less is known about where
+  brightest cluster galaxies (BCG) and dwarfs fall on it. Studying these galaxies' GCSs can help us understand
+  galaxy evolution across all masses and what roles galaxy mergers or disruptment could play.</p>
+<p style="font-family:verdana;">I am also interested in how we accurately and precisely determine the distributions and populations of
+  these massive systems of GCs. How can you accurately determine the mass of a GCS of a galaxy when it
+  may seem to overlap with the GCS of its satellites? How do you determine where a GCS ends and the intercluster
+  medium begins?</p>
+
+<h2 style="font-family:verdana;">About Me</h2>
+<p style="font-family:verdana;">I'm originally from Ottawa, Ontario but attended Mount Allison University in Sackville, New Brunswick for my undergraduate degree. I graduated from Mount Allison in 2019, obtaining a Bsc in honours physics with minors in mathematics and astronomy. Although Mount Allison is a small university (this may be the first time you're hearing about it!) it had a strong emphasis on interdiciplinary studies, which gave me a unique educational foundation in physics. I've studied the ways in which phyiscs relates to women and gender studies, religion, literature, and our environment.</p>
+<p style="font-family:verdana;">In 2019 I began my graduate studies at McMaster University, obtaining my Msc in astronomy in 2021. McMaster's astronomy department has provided me with amazing opportunities to build my science communication skills and coordinate astronomy outreach programs across Ontario (check out the outreach section in the sidebar).</p>
+<p style="font-family:verdana;">In my spare time I enjoy playing soccer, squash, and water polo with fellow graduate students in my department, playing video games at home, and reading science fiction. Most nights you can find me at one of Hamilton's independent movie theatres checking out what's on and snacking on a large popcorn! When I'm able, I also get out of the city and enjoy the backcountry of Canada's provincial and national parks, and their beautiful dark skies!</p>
+</body>
+</html>
