@@ -1,30 +1,31 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,255,0.2);
-  width:400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width:30%;
   float:right;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,255,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .container {
   padding: 1% 25.5%;
   display:inline-block;
   text-align: center;
-  border: 3px solid #8EC8FB;
+  border: 3px solid #FDDBF0;
+  font-size: 1vw;
 }
 
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 10%;
   background-color: #E0DDDF;
   position: fixed;
   height: 100%;
@@ -37,10 +38,11 @@
   padding: 16px;
   text-decoration: none;
   font-family: verdana;
+  font-size: 1vw;
 }
 
 .sidebar a.active {
-  background-color: #8EC8FB;
+  background-color: #FDDBF0;
   color: black;
   border: 1px solid #555;
 }
@@ -51,11 +53,13 @@
 }
 
 div.content {
-  margin-left: 200px;
-  margin-right: 400px;
+  margin-left: 10%;
+  margin-right: 30%;
   padding: 1px 16px;
   height: 1000px;
+  font-size: 1vw;
 }
+
 
 @media screen and (max-width: 700px) {
   .sidebar {
@@ -82,10 +86,10 @@ div.content {
 <div class="sidebar">
   <a href="index.html">Home</a>
   <a href="publications.html">Publications</a>
-  <a href="videos.html">Simulation Videos</a>
+  <a href="outreach.html">Outreach</a>
   <a class="active" href="cv.html">CV</a>
 </div>
-
+  
 <div class="card">
   <img src="me_fukaku.jpg" alt="Veronika" style="float:right;width:400px;height:540px;">
   <div class="container">
